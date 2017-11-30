@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ym-Da-d7h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZEv-pa-Rtd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextKitCell" id="6xp-9f-PtR">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6xp-9f-PtR" id="Lwn-Fn-oHt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kWD-0S-Exp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PSC-1p-zCW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZEv-pa-Rtd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0JS-TN-GgQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZEv-pa-Rtd" secondAttribute="bottom" id="IKw-Vo-bcb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEv-pa-Rtd" secondAttribute="trailing" id="Vbk-FF-mJw"/>
+                            <constraint firstItem="ZEv-pa-Rtd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZtH-nT-nKH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XtM-cb-doz"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZEv-pa-Rtd" id="sf0-cd-mI8"/>
+                        <segue destination="Ntl-k8-klq" kind="show" identifier="Configuration" id="6kZ-DG-J9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="33.733133433283363"/>
+        </scene>
+        <!--Configuration-->
+        <scene sceneID="OkM-1z-kfe">
+            <objects>
+                <viewController title="Configuration" id="Ntl-k8-klq" customClass="ConfigurationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5R-XM-m05">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZN-Sf-r49">
+                                <rect key="frame" x="15" y="79" width="345" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">在这个样例中，共有三个UITextView：
+
+Top:storyboard直接拖拽生成；
+
+Left:代码手动创建，与Top共用一个NSTextStorage，但是禁止滚动；
+
+Right:代码手动创建，与Left共用一个NSLayoutManger,不禁止滚动。
+
+1. 由于Left与Right都是使用Top的NSTextStorage，所以无法进行编辑操作；
+
+2. Left已禁止滚动，并且与Right共用一个NSLayoutManger，当文本超出可视范围时，超出范围的文本会在Right中显示
+
+通过这个样例可以看出NSTextStorage,NSLayoutManger,NSTextContainer三者之间的关系</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iZN-Sf-r49" firstAttribute="leading" secondItem="CK4-nP-X1x" secondAttribute="leading" constant="15" id="78r-tm-JPE"/>
+                            <constraint firstItem="iZN-Sf-r49" firstAttribute="top" secondItem="CK4-nP-X1x" secondAttribute="top" constant="15" id="DqD-Gj-S2c"/>
+                            <constraint firstItem="iZN-Sf-r49" firstAttribute="height" secondItem="c5R-XM-m05" secondAttribute="height" multiplier="0.45" id="WPa-Wb-OLd"/>
+                            <constraint firstItem="CK4-nP-X1x" firstAttribute="trailing" secondItem="iZN-Sf-r49" secondAttribute="trailing" constant="15" id="oDi-xU-h2w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CK4-nP-X1x"/>
+                    </view>
+                    <connections>
+                        <outlet property="topTextView" destination="iZN-Sf-r49" id="0DD-gl-24H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1W-RH-OaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="-657"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OxF-Ib-l95">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ym-Da-d7h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kvI-WA-80Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zdy-hM-k5M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzI-mK-8vL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="34"/>
+        </scene>
+    </scenes>
+</document>
