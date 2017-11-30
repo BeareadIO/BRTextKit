@@ -1,12 +1,20 @@
 PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - IQKeyboardManager (5.0.6)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - ChameleonFramework
+  - IQKeyboardManager
   - Masonry
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 83a9f8ebfef8f9bde033feb83c43fa6a2eb1328f
+PODFILE CHECKSUM: 17ce1d6f023496542b4673d7681355c71dc7c328
 
 COCOAPODS: 1.2.0

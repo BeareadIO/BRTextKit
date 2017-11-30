@@ -3,9 +3,11 @@
 
 target 'BRTextKit' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for BRTextKit
   pod 'Masonry'
+  pod 'ChameleonFramework'
+  pod 'IQKeyboardManager'
 
 end

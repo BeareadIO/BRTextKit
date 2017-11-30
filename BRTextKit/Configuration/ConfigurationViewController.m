@@ -7,7 +7,6 @@
 //
 
 #import "ConfigurationViewController.h"
-#import <Masonry.h>
 
 @interface ConfigurationViewController ()
 
@@ -21,6 +20,7 @@
     [super viewDidLoad];
     
     NSTextStorage *topStorage = self.topTextView.textStorage;
+    self.topTextView.backgroundColor = [UIColor flatWatermelonColor];
     
     NSLayoutManager *leftLayoutManager = [NSLayoutManager new];
     [topStorage addLayoutManager:leftLayoutManager];
@@ -31,6 +31,7 @@
     UITextView *leftTextView = [[UITextView alloc] initWithFrame:CGRectZero textContainer:leftTextContainer];
     leftTextView.translatesAutoresizingMaskIntoConstraints = YES;
     leftTextView.scrollEnabled = NO;
+    leftTextView.backgroundColor = [UIColor flatYellowColorDark];
     [self.view addSubview:leftTextView];
     
     NSTextContainer *rightTextContainer = [[NSTextContainer alloc] initWithSize:CGSizeZero];
@@ -39,6 +40,7 @@
     UITextView *rightTextView = [[UITextView alloc] initWithFrame:CGRectZero textContainer:rightTextContainer];
     rightTextView.translatesAutoresizingMaskIntoConstraints = YES;
     rightTextView.scrollEnabled = NO;
+    rightTextView.backgroundColor = [UIColor flatGreenColor];
     [self.view addSubview:rightTextView];
     
     [leftTextView mas_makeConstraints:^(MASConstraintMaker *make) {

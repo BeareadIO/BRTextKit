@@ -20,8 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"TextKit";
-    self.arrExample = @[@"Configuration",@"Highlighting",@"Layout",@"Interaction"];
+    self.arrExample = @[@"Configuration",@"Attributes",@"Layout",@"Interaction"];
     [self.tableView reloadData];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

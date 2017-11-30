@@ -51,11 +51,61 @@
                     <connections>
                         <outlet property="tableView" destination="ZEv-pa-Rtd" id="sf0-cd-mI8"/>
                         <segue destination="Ntl-k8-klq" kind="show" identifier="Configuration" id="6kZ-DG-J9h"/>
+                        <segue destination="Q1D-UU-cRw" kind="show" identifier="Attributes" id="KBg-K7-DiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
+        </scene>
+        <!--Attributes-->
+        <scene sceneID="F0S-l6-xnf">
+            <objects>
+                <viewController title="Attributes" id="Q1D-UU-cRw" customClass="AttributesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4a-yP-bxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-0Q-vBh">
+                                <rect key="frame" x="15" y="79" width="345" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">	在这个样例中，主要讲解NSTextStorage的使用。
+	NSTextStorage和NSArray，NSNumber等一样都是类簇，内部Init要重新实现，根据文档规定，有四个方法是必须实现的：
+ - (NSString *)string;
+ - (NSDictionary *)attributesAtIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;
+
+ - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)str;
+ - (void)setAttributes:(NSDictionary *)attrs range:(NSRange)range;
+在后两个方法中还要调用edited:range:changeInLength:方法去使文本发生变化
+
+	额外要说的是，我在这个样例做了几个正则匹配。
+当输入iPad,iPhone,iTouch等以i开头第二个字母大写的单词，我会将它变为绿色；
+当输入’高亮’时，我会把它变成蓝色；
+当输入’下划线’时，我会给它加入下划线；
+当输入’删除线’时，我会给它加入删除线；
+
+	在这里，要注意的是，自定义的NSTextStorage用到其他UITextView上时，一定要强引用，不然不会生效。
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yks-4c-J1P" firstAttribute="bottom" secondItem="GqC-0Q-vBh" secondAttribute="bottom" constant="15" id="V7F-aX-TxR"/>
+                            <constraint firstItem="GqC-0Q-vBh" firstAttribute="leading" secondItem="yks-4c-J1P" secondAttribute="leading" constant="15" id="lk4-ri-3hJ"/>
+                            <constraint firstItem="yks-4c-J1P" firstAttribute="trailing" secondItem="GqC-0Q-vBh" secondAttribute="trailing" constant="15" id="neO-Dn-Gnc"/>
+                            <constraint firstItem="GqC-0Q-vBh" firstAttribute="top" secondItem="yks-4c-J1P" secondAttribute="top" constant="15" id="qvi-qI-V3E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yks-4c-J1P"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="GqC-0Q-vBh" id="RLI-V3-wQr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZ3-sK-T0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="-278"/>
         </scene>
         <!--Configuration-->
         <scene sceneID="OkM-1z-kfe">
@@ -100,7 +150,7 @@ Right:代码手动创建，与Left共用一个NSLayoutManger,不禁止滚动。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1W-RH-OaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-657"/>
+            <point key="canvasLocation" x="1183" y="-958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OxF-Ib-l95">

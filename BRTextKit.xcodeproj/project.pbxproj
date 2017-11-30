@@ -14,11 +14,12 @@
 		26E6807A1FCFDE360046610D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E680781FCFDE360046610D /* LaunchScreen.storyboard */; };
 		26E6807D1FCFDE360046610D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6807C1FCFDE360046610D /* main.m */; };
 		26E680861FCFE1350046610D /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E680851FCFE1350046610D /* ConfigurationViewController.m */; };
-		5F875DD4576BE8C8656E43D9 /* libPods-BRTextKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20899C7DD9541EE8246FC903 /* libPods-BRTextKit.a */; };
+		26E6808B1FCFF1050046610D /* AttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6808A1FCFF1050046610D /* AttributesViewController.m */; };
+		26E6808E1FCFF5D60046610D /* AttributesTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6808D1FCFF5D60046610D /* AttributesTextStorage.m */; };
+		8A6C4045BF782420F5BD66A4 /* Pods_BRTextKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B5508E4642732E803C9C54 /* Pods_BRTextKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20899C7DD9541EE8246FC903 /* libPods-BRTextKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRTextKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E6806A1FCFDE360046610D /* BRTextKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRTextKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E6806D1FCFDE360046610D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26E6806E1FCFDE360046610D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +32,12 @@
 		26E6807C1FCFDE360046610D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26E680841FCFE1350046610D /* ConfigurationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
 		26E680851FCFE1350046610D /* ConfigurationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		26E680891FCFF1050046610D /* AttributesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributesViewController.h; sourceTree = "<group>"; };
+		26E6808A1FCFF1050046610D /* AttributesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributesViewController.m; sourceTree = "<group>"; };
+		26E6808C1FCFF5D60046610D /* AttributesTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributesTextStorage.h; sourceTree = "<group>"; };
+		26E6808D1FCFF5D60046610D /* AttributesTextStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributesTextStorage.m; sourceTree = "<group>"; };
+		26E6808F1FCFF79D0046610D /* BRTextKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRTextKit.pch; sourceTree = "<group>"; };
+		36B5508E4642732E803C9C54 /* Pods_BRTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EAFA33D734C0A85070F315 /* Pods-BRTextKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRTextKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRTextKit/Pods-BRTextKit.release.xcconfig"; sourceTree = "<group>"; };
 		ADD725F03CB8EB72D496AE85 /* Pods-BRTextKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRTextKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRTextKit/Pods-BRTextKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F875DD4576BE8C8656E43D9 /* libPods-BRTextKit.a in Frameworks */,
+				8A6C4045BF782420F5BD66A4 /* Pods_BRTextKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +57,7 @@
 		17FB867CEA7AD3531272462A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				20899C7DD9541EE8246FC903 /* libPods-BRTextKit.a */,
+				36B5508E4642732E803C9C54 /* Pods_BRTextKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,11 +88,13 @@
 				26E680701FCFDE360046610D /* ViewController.h */,
 				26E680711FCFDE360046610D /* ViewController.m */,
 				26E680831FCFE11F0046610D /* Configuration */,
+				26E680881FCFF0ED0046610D /* Attributes */,
 				26E680731FCFDE360046610D /* Main.storyboard */,
 				26E680761FCFDE360046610D /* Assets.xcassets */,
 				26E680781FCFDE360046610D /* LaunchScreen.storyboard */,
 				26E6807B1FCFDE360046610D /* Info.plist */,
 				26E6807C1FCFDE360046610D /* main.m */,
+				26E6808F1FCFF79D0046610D /* BRTextKit.pch */,
 			);
 			path = BRTextKit;
 			sourceTree = "<group>";
@@ -97,6 +106,17 @@
 				26E680851FCFE1350046610D /* ConfigurationViewController.m */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		26E680881FCFF0ED0046610D /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				26E680891FCFF1050046610D /* AttributesViewController.h */,
+				26E6808A1FCFF1050046610D /* AttributesViewController.m */,
+				26E6808C1FCFF5D60046610D /* AttributesTextStorage.h */,
+				26E6808D1FCFF5D60046610D /* AttributesTextStorage.m */,
+			);
+			path = Attributes;
 			sourceTree = "<group>";
 		};
 		CB4C4FD8E043742C2A4DAC37 /* Pods */ = {
@@ -231,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E680721FCFDE360046610D /* ViewController.m in Sources */,
+				26E6808E1FCFF5D60046610D /* AttributesTextStorage.m in Sources */,
 				26E6807D1FCFDE360046610D /* main.m in Sources */,
 				26E6806F1FCFDE360046610D /* AppDelegate.m in Sources */,
+				26E6808B1FCFF1050046610D /* AttributesViewController.m in Sources */,
 				26E680861FCFE1350046610D /* ConfigurationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +391,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BRTextKit/BRTextKit.pch;
 				INFOPLIST_FILE = BRTextKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unicorn.BRTextKit;
@@ -383,6 +407,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BRTextKit/BRTextKit.pch;
 				INFOPLIST_FILE = BRTextKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unicorn.BRTextKit;
