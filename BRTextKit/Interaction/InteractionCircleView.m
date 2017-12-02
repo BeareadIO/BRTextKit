@@ -10,5 +10,9 @@
 
 @implementation InteractionCircleView
 
+- (void)drawRect:(CGRect)rect {
+    [self.tintColor setFill];
+    [[UIBezierPath bezierPathWithOvalInRect:self.bounds] fill];
+}
 
 @end

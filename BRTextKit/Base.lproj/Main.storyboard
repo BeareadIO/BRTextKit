@@ -90,6 +90,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PC4-1O-SPU" customClass="InteractionCircleView">
+                                <rect key="frame" x="15" y="93" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -100,6 +104,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="veT-vN-3J4"/>
                     </view>
+                    <connections>
+                        <outlet property="circleView" destination="PC4-1O-SPU" id="b3p-1s-AG3"/>
+                        <outlet property="textView" destination="c85-aU-eA7" id="oQN-YE-hnL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pV1-L8-cag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
