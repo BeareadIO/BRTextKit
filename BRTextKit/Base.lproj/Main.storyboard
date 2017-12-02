@@ -52,11 +52,58 @@
                         <outlet property="tableView" destination="ZEv-pa-Rtd" id="sf0-cd-mI8"/>
                         <segue destination="Ntl-k8-klq" kind="show" identifier="Configuration" id="6kZ-DG-J9h"/>
                         <segue destination="Q1D-UU-cRw" kind="show" identifier="Attributes" id="KBg-K7-DiJ"/>
+                        <segue destination="U6H-VS-LFK" kind="show" identifier="Layout" id="pRi-Ze-c8R"/>
+                        <segue destination="frk-q6-qgt" kind="show" identifier="Interaction" id="OcF-PO-SZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="33.733133433283363"/>
+            <point key="canvasLocation" x="342" y="34"/>
+        </scene>
+        <!--Layout-->
+        <scene sceneID="PIf-8F-MMN">
+            <objects>
+                <viewController title="Layout" id="U6H-VS-LFK" customClass="LayoutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tA2-h8-BFg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="45W-Ok-aFs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6c-uF-beH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="414"/>
+        </scene>
+        <!--Interaction-->
+        <scene sceneID="06s-so-LF1">
+            <objects>
+                <viewController title="Interaction" id="frk-q6-qgt" customClass="InteractionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0gZ-LB-W7u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c85-aU-eA7">
+                                <rect key="frame" x="15" y="79" width="345" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="veT-vN-3J4" firstAttribute="trailing" secondItem="c85-aU-eA7" secondAttribute="trailing" constant="15" id="5aA-TY-X0z"/>
+                            <constraint firstItem="c85-aU-eA7" firstAttribute="top" secondItem="veT-vN-3J4" secondAttribute="top" constant="15" id="IUf-nc-dt3"/>
+                            <constraint firstItem="c85-aU-eA7" firstAttribute="leading" secondItem="veT-vN-3J4" secondAttribute="leading" constant="15" id="lsn-VN-Cpq"/>
+                            <constraint firstItem="veT-vN-3J4" firstAttribute="bottom" secondItem="c85-aU-eA7" secondAttribute="bottom" constant="15" id="n1p-VR-jB5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="veT-vN-3J4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pV1-L8-cag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="1109"/>
         </scene>
         <!--Attributes-->
         <scene sceneID="F0S-l6-xnf">
@@ -69,7 +116,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GqC-0Q-vBh">
                                 <rect key="frame" x="15" y="79" width="345" height="573"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">	在这个样例中，主要讲解NSTextStorage的使用。
+                                <string key="text">	在这个样例中，主要讲解NSTextStorage的使用。
 	NSTextStorage和NSArray，NSNumber等一样都是类簇，内部Init要重新实现，根据文档规定，有四个方法是必须实现的：
  - (NSString *)string;
  - (NSDictionary *)attributesAtIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;
@@ -85,7 +132,7 @@
 当输入’删除线’时，我会给它加入删除线；
 
 	在这里，要注意的是，自定义的NSTextStorage用到其他UITextView上时，一定要强引用，不然不会生效。
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -118,7 +165,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZN-Sf-r49">
                                 <rect key="frame" x="15" y="79" width="345" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">在这个样例中，共有三个UITextView：
+                                <string key="text">在这个样例中，共有三个UITextView：
 
 Top:storyboard直接拖拽生成；
 
@@ -130,7 +177,7 @@ Right:代码手动创建，与Left共用一个NSLayoutManger,不禁止滚动。
 
 2. Left已禁止滚动，并且与Right共用一个NSLayoutManger，当文本超出可视范围时，超出范围的文本会在Right中显示
 
-通过这个样例可以看出NSTextStorage,NSLayoutManger,NSTextContainer三者之间的关系</mutableString>
+通过这个样例可以看出NSTextStorage,NSLayoutManger,NSTextContainer三者之间的关系</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

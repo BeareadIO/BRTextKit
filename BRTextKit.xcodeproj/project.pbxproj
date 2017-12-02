@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B027871FD14A0E00533B09 /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B027861FD14A0E00533B09 /* LayoutViewController.m */; };
+		26B0278A1FD14A2500533B09 /* LayoutTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B027891FD14A2500533B09 /* LayoutTextStorage.m */; };
+		26B0278D1FD14C5600533B09 /* UnderlineLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B0278C1FD14C5600533B09 /* UnderlineLayoutManager.m */; };
+		26B027911FD14E3B00533B09 /* InteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B027901FD14E3B00533B09 /* InteractionViewController.m */; };
+		26B027941FD1579E00533B09 /* InteractionCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B027931FD1579E00533B09 /* InteractionCircleView.m */; };
 		26E6806F1FCFDE360046610D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E6806E1FCFDE360046610D /* AppDelegate.m */; };
 		26E680721FCFDE360046610D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E680711FCFDE360046610D /* ViewController.m */; };
 		26E680751FCFDE360046610D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E680731FCFDE360046610D /* Main.storyboard */; };
@@ -20,6 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26B027851FD14A0E00533B09 /* LayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutViewController.h; sourceTree = "<group>"; };
+		26B027861FD14A0E00533B09 /* LayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutViewController.m; sourceTree = "<group>"; };
+		26B027881FD14A2500533B09 /* LayoutTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutTextStorage.h; sourceTree = "<group>"; };
+		26B027891FD14A2500533B09 /* LayoutTextStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutTextStorage.m; sourceTree = "<group>"; };
+		26B0278B1FD14C5600533B09 /* UnderlineLayoutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnderlineLayoutManager.h; sourceTree = "<group>"; };
+		26B0278C1FD14C5600533B09 /* UnderlineLayoutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnderlineLayoutManager.m; sourceTree = "<group>"; };
+		26B0278F1FD14E3B00533B09 /* InteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractionViewController.h; sourceTree = "<group>"; };
+		26B027901FD14E3B00533B09 /* InteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractionViewController.m; sourceTree = "<group>"; };
+		26B027921FD1579E00533B09 /* InteractionCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractionCircleView.h; sourceTree = "<group>"; };
+		26B027931FD1579E00533B09 /* InteractionCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractionCircleView.m; sourceTree = "<group>"; };
 		26E6806A1FCFDE360046610D /* BRTextKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRTextKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E6806D1FCFDE360046610D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26E6806E1FCFDE360046610D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +77,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		26B027841FD149F800533B09 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				26B027851FD14A0E00533B09 /* LayoutViewController.h */,
+				26B027861FD14A0E00533B09 /* LayoutViewController.m */,
+				26B027881FD14A2500533B09 /* LayoutTextStorage.h */,
+				26B027891FD14A2500533B09 /* LayoutTextStorage.m */,
+				26B0278B1FD14C5600533B09 /* UnderlineLayoutManager.h */,
+				26B0278C1FD14C5600533B09 /* UnderlineLayoutManager.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		26B0278E1FD14E2100533B09 /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				26B0278F1FD14E3B00533B09 /* InteractionViewController.h */,
+				26B027901FD14E3B00533B09 /* InteractionViewController.m */,
+				26B027921FD1579E00533B09 /* InteractionCircleView.h */,
+				26B027931FD1579E00533B09 /* InteractionCircleView.m */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
 		26E680611FCFDE360046610D = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +126,8 @@
 				26E6806E1FCFDE360046610D /* AppDelegate.m */,
 				26E680701FCFDE360046610D /* ViewController.h */,
 				26E680711FCFDE360046610D /* ViewController.m */,
+				26B0278E1FD14E2100533B09 /* Interaction */,
+				26B027841FD149F800533B09 /* Layout */,
 				26E680831FCFE11F0046610D /* Configuration */,
 				26E680881FCFF0ED0046610D /* Attributes */,
 				26E680731FCFDE360046610D /* Main.storyboard */,
@@ -250,11 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B027871FD14A0E00533B09 /* LayoutViewController.m in Sources */,
 				26E680721FCFDE360046610D /* ViewController.m in Sources */,
 				26E6808E1FCFF5D60046610D /* AttributesTextStorage.m in Sources */,
+				26B027911FD14E3B00533B09 /* InteractionViewController.m in Sources */,
+				26B0278D1FD14C5600533B09 /* UnderlineLayoutManager.m in Sources */,
 				26E6807D1FCFDE360046610D /* main.m in Sources */,
 				26E6806F1FCFDE360046610D /* AppDelegate.m in Sources */,
 				26E6808B1FCFF1050046610D /* AttributesViewController.m in Sources */,
+				26B027941FD1579E00533B09 /* InteractionCircleView.m in Sources */,
+				26B0278A1FD14A2500533B09 /* LayoutTextStorage.m in Sources */,
 				26E680861FCFE1350046610D /* ConfigurationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
