@@ -29,8 +29,8 @@
     lineRect.origin.x += containerOrigin.x;
     lineRect.origin.y += containerOrigin.y + baselineOffset + 5;
     
-//    [[UIColor flatGrayColor] set];
-//    [[UIBezierPath bezierPathWithRect:lineRect] fill];
+    [[UIColor flatGrayColor] set];
+    [[UIBezierPath bezierPathWithRect:lineRect] fill];
 }
 
 

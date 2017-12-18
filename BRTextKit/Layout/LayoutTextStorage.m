@@ -47,6 +47,10 @@
     [self removeAttribute:NSLinkAttributeName range:paragraphRange];
     [self removeAttribute:NSUnderlineStyleAttributeName range:paragraphRange];
     
+    NSMutableParagraphStyle *para = [[NSMutableParagraphStyle alloc] init];
+    para.firstLineHeadIndent = self.firstLineHeadIndent;
+    [self addAttribute:NSParagraphStyleAttributeName value:para range:paragraphRange];
+    
     [linkDetector enumerateMatchesInString:self.string options:0 range:paragraphRange usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
         [self addAttribute:NSLinkAttributeName value:result.URL range:result.range];    
         [self addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:result.range];

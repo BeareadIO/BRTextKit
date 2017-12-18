@@ -10,4 +10,6 @@
 
 @interface LayoutTextStorage : NSTextStorage
 
+@property (assign, nonatomic) CGFloat firstLineHeadIndent;
+
 @end

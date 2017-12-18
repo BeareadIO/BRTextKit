@@ -23,6 +23,7 @@
 
     self.storage = [[LayoutTextStorage alloc] init];
     
+    self.storage.firstLineHeadIndent = 30;
     UnderlineLayoutManager *underlineManager = [[UnderlineLayoutManager alloc] init];
     [self.storage addLayoutManager:underlineManager];
     
@@ -60,10 +61,6 @@
 }
 
 - (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect {
-    return 10;
-}
-
-- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager paragraphSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect {
     return 10;
 }
 
